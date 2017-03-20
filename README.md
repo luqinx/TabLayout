@@ -114,6 +114,6 @@ TabLayout是android design library 中的一个很常用组件，通常是TabLay
 
 #### 最终效果
 
-<iframe height=498 width=510 src="./screenshots/video_tablayout.mp4">
+![效果展示](./screenshots/pic_tablayout_2.gif)
 
 
