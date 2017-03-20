@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SampleTabLayout</string>
+    <string name="title_fragment_common">Common</string>
+    <string name="title_fragment_fixed">Fixed</string>
+    <string name="title_fragment_scrollable">Scrollable</string>
+    <string name="title_message">消息</string>
+    <string name="title_mine">我的</string>
+    <string name="title_fragment_a">FragA</string>
+    <string name="title_fragment_b">FragB</string>
+    <string name="title_fragment_c">FragC</string>
+    <string name="title_fragment_d">FragD</string>
+    <string name="title_fragment_e">fragE</string>
+    <string name="fragment_g">FragG</string>
+    <string name="fragment_f">FragF</string>
+</resources>

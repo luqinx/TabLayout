@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <chao.widget.tablayout.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingBottom="@dimen/common_height_6"
+        app:tabPaddingTop="@dimen/common_height_6"
+        app:tabPaddingBottom="@dimen/common_height_6"
+        app:tabPaddingStart="@dimen/common_width_13"
+        app:tabPaddingEnd="@dimen/common_width_13"
+        app:tabBackground="@null"
+        app:tabTextColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextSize="@dimen/common_title_size12"
+        app:tabTextStyle="normal"
+        app:tabSelectedTextStyle="bold"
+        app:tabIndicatorColor="@color/white"
+        android:background="@color/green_52ba91"
+        />
+
+    <view
+        android:id="@+id/viewpager"
+        class="chao.widget.sample.TabFragment$FixedViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>
