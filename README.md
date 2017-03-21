@@ -1,8 +1,7 @@
 ## TabLayout
 
-TabLayout是android design library 中的一个很常用组件，通常是TabLayout + ViewPager + Fragment一起组合使用。
-非常强大而且非常简便。
-使用2层TabLayout + ViewPager + Fragment组合，很容易实现下图所示的2层Tab嵌套界面，具体实现方法在项目中请自行查看，这里不再赘述
+TabLayout是android design library 中的一个很常用组件，通常是TabLayout + ViewPager + Fragment一起组合使用。非常强大而且很简便。
+使用2层TabLayout + ViewPager + Fragment组合，很容易实现下图所示的2层Tab嵌套界面，具体实现方法写在项目中(要将项目中的TabLayout换成android design 中的TabLayout,直接修改包名就可以替换)，由于不是本文重点，请自行查看，这里不再赘述
 <div align="center" >
 <img src="./screenshots/pic_design_tablayout.png" width="270" height="480">
 </div>
@@ -23,7 +22,7 @@ TabLayout是android design library 中的一个很常用组件，通常是TabLay
 2. 第二步就是消除这些报错。如使用ValueAnimator替代ValueAnimatorCompat,添加annotation依赖包去除注解报错等等去除所有报错情况。
 3. 最后，你可以随心所遇的将TabLayout修改成你想要的效果。
 
-该项目中的TabLayout就是我在android design library的TabLayout基础上加工而来，两者用法基本一致，区别如下：
+TabLayout是在android design library的android.support.design.widget.TabLayout基础上加工而来，两者用法基本一致，区别如下：
 
 1. 修改了指示器显示方式：
 	design:   位于Tab底部，默认不显示，宽度为整个Tab的宽度
@@ -75,19 +74,18 @@ TabLayout是android design library 中的一个很常用组件，通常是TabLay
 ```
 
 ```
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.yjs.android.view.tablayout.TabLayout
+    <chao.widget.tablayout.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:paddingLeft="@dimen/common_width_3"
-        android:paddingRight="@dimen/common_width_3"
         android:paddingBottom="@dimen/common_height_6"
         app:tabPaddingTop="@dimen/common_height_6"
         app:tabPaddingBottom="@dimen/common_height_6"
@@ -96,19 +94,20 @@ TabLayout是android design library 中的一个很常用组件，通常是TabLay
         app:tabBackground="@null"
         app:tabTextColor="@color/white"
         app:tabSelectedTextColor="@color/white"
-        app:tabTextSize="@dimen/common_title_size14"
-        app:tabSelectedTextSize="@dimen/common_title_size16"
+        app:tabTextSize="@dimen/common_title_size12"
         app:tabTextStyle="normal"
         app:tabSelectedTextStyle="bold"
         app:tabIndicatorColor="@color/white"
         android:background="@color/green_52ba91"
         />
 
-    <com.yjs.android.view.viewpager.FixedViewPager
+    <view
         android:id="@+id/viewpager"
+        class="chao.widget.sample.TabFragment$FixedViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1" />
+</LinearLayout>
 </LinearLayout>
 ```
 
